@@ -31,3 +31,26 @@ BEGIN
 END;
 /
 SELECT * FROM ALL_SA_LEVELS;
+/
+
+-- Create compartments
+BEGIN
+  SA_COMPONENTS.CREATE_COMPARTMENT (
+    policy_name => 'PROJECT_OLS_POL',
+    comp_num => '1',
+    short_name => 'C',
+    long_name => 'COMBAT');
+  SA_COMPONENTS.CREATE_COMPARTMENT (
+    policy_name => 'PROJECT_OLS_POL',
+    comp_num => '2',
+    short_name => 'T',
+    long_name => 'TRANSPORT');
+  SA_COMPONENTS.CREATE_COMPARTMENT (
+    policy_name => 'PROJECT_OLS_POL',
+    comp_num => '3',
+    short_name => 'M',
+    long_name => 'MEDICAL');
+END;
+/
+SELECT * FROM ALL_SA_COMPARTMENTS;
+/
