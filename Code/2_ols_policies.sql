@@ -2,6 +2,7 @@
 BEGIN
   SA_SYSDBA.CREATE_POLICY (
     policy_name => 'PROJECT_OLS_POL',
+    column_name => 'OLS_COL',
     default_options => 'ALL_CONTROL');
 END;
 /
@@ -53,4 +54,13 @@ BEGIN
 END;
 /
 SELECT * FROM ALL_SA_COMPARTMENTS;
+/
+
+
+
+
+BEGIN
+  SA_SYSDBA.DROP_POLICY (
+    policy_name => 'PROJECT_OLS_POL');
+END;
 /

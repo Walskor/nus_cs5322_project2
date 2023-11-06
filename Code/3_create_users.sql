@@ -3,15 +3,43 @@ CREATE USER SALE_WEST_1 IDENTIFIED BY password; /
 CREATE USER SALE_NORTH_1 IDENTIFIED BY password; /
 CREATE USER SALE_SOUTH_1 IDENTIFIED BY password; /
 
+CREATE USER analyst_east IDENTIFIED BY password; /
+CREATE USER analyst_west IDENTIFIED BY password; /
+CREATE USER analyst_north IDENTIFIED BY password; /
+CREATE USER analyst_south IDENTIFIED BY password; /
+CREATE USER high_analyst_east_west IDENTIFIED BY password; /
+CREATE USER high_analyst_north_south IDENTIFIED BY password; /
 
+CREATE USER manager IDENTIFIED BY password; /
+
+---     ---
 
 GRANT CONNECT to SALE_EAST_1; /
 GRANT CONNECT to SALE_WEST_1; /
 GRANT CONNECT to SALE_NORTH_1; /
 GRANT CONNECT to SALE_SOUTH_1; /
 
+GRANT CONNECT to analyst_east; /
+GRANT CONNECT to analyst_west; /
+GRANT CONNECT to analyst_north; /
+GRANT CONNECT to analyst_south; /
+GRANT CONNECT to high_analyst_east_west; /
+GRANT CONNECT to high_analyst_north_south; /
+
+GRANT CONNECT to manager; /
+
+--- ---
 
 GRANT ALL PRIVILEGES ON USERS TO SALE_EAST_1; /
 GRANT ALL PRIVILEGES ON USERS TO SALE_WEST_1; /
 GRANT ALL PRIVILEGES ON USERS TO SALE_NORTH_1; /
 GRANT ALL PRIVILEGES ON USERS TO SALE_SOUTH_1; /
+
+GRANT ALL PRIVILEGES ON USERS TO analyst_east; /
+GRANT ALL PRIVILEGES ON USERS TO analyst_west; /
+GRANT ALL PRIVILEGES ON USERS TO analyst_north; /
+GRANT ALL PRIVILEGES ON USERS TO analyst_south; /
+GRANT ALL PRIVILEGES ON USERS TO high_analyst_east_west; /
+GRANT ALL PRIVILEGES ON USERS TO high_analyst_north_south; /
+
+GRANT ALL PRIVILEGES ON USERS TO manager; /
