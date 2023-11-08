@@ -107,38 +107,43 @@ BEGIN
     data_label => TRUE);
   SA_LABEL_ADMIN.CREATE_LABEL(
     policy_name => 'PROJECT_OLS_POL',
-    label_tag => '12',
+    label_tag => '13',
     label_value => 'S:C:WS',
     data_label => TRUE);
   SA_LABEL_ADMIN.CREATE_LABEL(
     policy_name => 'PROJECT_OLS_POL',
-    label_tag => '12',
+    label_tag => '14',
     label_value => 'S:C,H:WS',
     data_label => TRUE);
   SA_LABEL_ADMIN.CREATE_LABEL(
     policy_name => 'PROJECT_OLS_POL',
-    label_tag => '12',
+    label_tag => '15',
     label_value => 'S:C,H,J:WS',
     data_label => TRUE);
   SA_LABEL_ADMIN.CREATE_LABEL(
     policy_name => 'PROJECT_OLS_POL',
-    label_tag => '12',
+    label_tag => '16',
     label_value => 'S:C,H,J:',
     data_label => TRUE);
   SA_LABEL_ADMIN.CREATE_LABEL(
     policy_name => 'PROJECT_OLS_POL',
-    label_tag => '13',
+    label_tag => '17',
     label_value => 'TS:C,H,J:COM',
     data_label => TRUE);
   SA_LABEL_ADMIN.CREATE_LABEL(
     policy_name => 'PROJECT_OLS_POL',
-    label_tag => '14',
+    label_tag => '18',
     label_value => 'C::ES',
     data_label => TRUE);
   SA_LABEL_ADMIN.CREATE_LABEL(
     policy_name => 'PROJECT_OLS_POL',
-    label_tag => '15',
+    label_tag => '19',
     label_value => 'TS:C:EA',
+    data_label => TRUE);
+  SA_LABEL_ADMIN.CREATE_LABEL(
+    policy_name => 'PROJECT_OLS_POL',
+    label_tag => '20',
+    label_value => 'S:H:WA',
     data_label => TRUE);
     
 END;
