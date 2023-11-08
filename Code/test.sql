@@ -1,0 +1,21 @@
+--manager 
+SELECT SA_SESSION.LABEL('PROJECT_OLS_POL') FROM DUAL; --label=TS:C,H,J:COM,EAST,WEST,EA,ES,WA,WS
+
+select * from INSURANCE.USERS; --can see all data
+
+
+--SALE_EAST_1  
+SELECT SA_SESSION.LABEL('PROJECT_OLS_POL') FROM DUAL; --label=S:C:ES
+
+select * from INSURANCE.USERS; --can see id 1,3
+
+
+--ANALYST  
+SELECT SA_SESSION.LABEL('PROJECT_OLS_POL') FROM DUAL; --label=S:C,H,J:WA
+
+select * from INSURANCE.USERS; --can see id 4
+
+--HIGH_ANALYST_EAST_WEST
+SELECT SA_SESSION.LABEL('PROJECT_OLS_POL') FROM DUAL; --label=TS:C:EA,WA
+
+select * from INSURANCE.USERS; --can see id 5

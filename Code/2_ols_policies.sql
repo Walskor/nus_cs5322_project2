@@ -122,9 +122,31 @@ BEGIN
     label_tag => '13',
     label_value => 'TS:C,H,J:COM',
     data_label => TRUE);
+  SA_LABEL_ADMIN.CREATE_LABEL(
+    policy_name => 'PROJECT_OLS_POL',
+    label_tag => '14',
+    label_value => 'C::ES',
+    data_label => TRUE);
+  SA_LABEL_ADMIN.CREATE_LABEL(
+    policy_name => 'PROJECT_OLS_POL',
+    label_tag => '15',
+    label_value => 'TS:C:EA',
+    data_label => TRUE);
 END;
 /
 
+-- Drop all labels
+BEGIN
+  FOR ROW IN (SELECT * FROM ALL_SA_LABELS)
+  LOOP
+    SA_LABEL_ADMIN.DROP_LABEL (
+      policy_name => 'PROJECT_OLS_POL',
+      label_value => ROW.LABEL);
+  END LOOP;
+END;
+/
+
+--check all labels
 SELECT * FROM ALL_SA_LABELS;
 
 BEGIN
