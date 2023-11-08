@@ -67,40 +67,28 @@ BEGIN
   SA_COMPONENTS.CREATE_GROUP (
     policy_name => 'PROJECT_OLS_POL',
     group_num => '10',
-    short_name => 'EAST',
-    long_name => 'EAST',
+    short_name => 'EA',
+    long_name => 'EAST_ANALYST',
     parent_name => 'COM');
   SA_COMPONENTS.CREATE_GROUP (
     policy_name => 'PROJECT_OLS_POL',
     group_num => '20',
-    short_name => 'WEST',
-    long_name => 'WEST',
+    short_name => 'WA',
+    long_name => 'WEST_ANALYST',
     parent_name => 'COM');
     
-  SA_COMPONENTS.CREATE_GROUP (
-    policy_name => 'PROJECT_OLS_POL',
-    group_num => '100',
-    short_name => 'EA',
-    long_name => 'EAST_ANALYST',
-    parent_name => 'EAST');
   SA_COMPONENTS.CREATE_GROUP (
     policy_name => 'PROJECT_OLS_POL',
     group_num => '101',
     short_name => 'ES',
     long_name => 'EAST_SERVICE',
-    parent_name => 'EAST');
-  SA_COMPONENTS.CREATE_GROUP (
-    policy_name => 'PROJECT_OLS_POL',
-    group_num => '200',
-    short_name => 'WA',
-    long_name => 'WEST_ANALYST',
-    parent_name => 'WEST');
+    parent_name => 'EA');
   SA_COMPONENTS.CREATE_GROUP (
     policy_name => 'PROJECT_OLS_POL',
     group_num => '201',
     short_name => 'WS',
     long_name => 'WEST_SERVICE',
-    parent_name => 'WEST');
+    parent_name => 'WA');
 END;
 /
 SELECT * FROM ALL_SA_GROUPS;
@@ -119,6 +107,26 @@ BEGIN
     data_label => TRUE);
   SA_LABEL_ADMIN.CREATE_LABEL(
     policy_name => 'PROJECT_OLS_POL',
+    label_tag => '12',
+    label_value => 'S:C:WS',
+    data_label => TRUE);
+  SA_LABEL_ADMIN.CREATE_LABEL(
+    policy_name => 'PROJECT_OLS_POL',
+    label_tag => '12',
+    label_value => 'S:C,H:WS',
+    data_label => TRUE);
+  SA_LABEL_ADMIN.CREATE_LABEL(
+    policy_name => 'PROJECT_OLS_POL',
+    label_tag => '12',
+    label_value => 'S:C,H,J:WS',
+    data_label => TRUE);
+  SA_LABEL_ADMIN.CREATE_LABEL(
+    policy_name => 'PROJECT_OLS_POL',
+    label_tag => '12',
+    label_value => 'S:C,H,J:',
+    data_label => TRUE);
+  SA_LABEL_ADMIN.CREATE_LABEL(
+    policy_name => 'PROJECT_OLS_POL',
     label_tag => '13',
     label_value => 'TS:C,H,J:COM',
     data_label => TRUE);
@@ -132,6 +140,7 @@ BEGIN
     label_tag => '15',
     label_value => 'TS:C:EA',
     data_label => TRUE);
+    
 END;
 /
 
