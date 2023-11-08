@@ -45,7 +45,7 @@ SA_USER_ADMIN.SET_USER_PRIVS (
   policy_name => 'PROJECT_OLS_POL',
   user_name => 'SALE_EAST_1',
   privileges => '');
-END
+END;
 /
 
 BEGIN
@@ -65,7 +65,7 @@ SA_USER_ADMIN.SET_USER_PRIVS (
   policy_name => 'PROJECT_OLS_POL',
   user_name => 'HIGH_SALE_WEST',
   privileges => '');
-END
+END;
 /
   
 BEGIN
@@ -85,7 +85,7 @@ SA_USER_ADMIN.SET_USER_PRIVS (
   policy_name => 'PROJECT_OLS_POL',
   user_name => 'ANALYST_WEST_1',
   privileges => '');
-END
+END;
 /
 
 BEGIN
@@ -105,7 +105,7 @@ SA_USER_ADMIN.SET_USER_PRIVS (
   policy_name => 'PROJECT_OLS_POL',
   user_name => 'HIGH_ANALYST_EAST_WEST',
   privileges => '');
-END
+END;
 /
 
 BEGIN
