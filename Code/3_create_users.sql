@@ -71,7 +71,7 @@ BEGIN
 SA_USER_ADMIN.SET_LEVELS (
   policy_name => 'PROJECT_OLS_POL',
   user_name => 'HIGH_SALE_WEST',
-  max_level => 'S');
+  max_level => 'TS');
 SA_USER_ADMIN.SET_COMPARTMENTS (
   policy_name => 'PROJECT_OLS_POL',
   user_name => 'HIGH_SALE_WEST',

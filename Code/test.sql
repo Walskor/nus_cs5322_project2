@@ -9,7 +9,7 @@ SELECT SA_SESSION.LABEL('PROJECT_OLS_POL') FROM DUAL; --label=S:C:ES
 
 select * from INSURANCE.USERS; --can see id 1,3
 
---ANALYST  
+--ANALYST_WEST_1
 SELECT SA_SESSION.LABEL('PROJECT_OLS_POL') FROM DUAL; --label=S:C,H,J:WA
 
 select * from INSURANCE.USERS; --can see id 4
