@@ -15,7 +15,7 @@ begin
     INSERT INTO INSURANCE.USERS 
     VALUES (4, 'Emily Davis', 'west', '1234 North Ave, Chicago, IL 60606', '555-4567', 'Y', 7777, CHAR_TO_LABEL('PROJECT_OLS_POL','S:C,H,J:WA'));
     INSERT INTO INSURANCE.USERS 
-    VALUES (5, 'David Brown', 'east', '567 South St, Seattle, WA 98101', '555-3456', 'N', 100000, CHAR_TO_LABEL('PROJECT_OLS_POL','TS:C:EA'));
+    VALUES (5, 'David Brown', 'east', '567 South St, Seattle, WA 98101', '555-3456', 'Y', 100000, CHAR_TO_LABEL('PROJECT_OLS_POL','TS:C:EA'));
     COMMIT;
 end;
 /
@@ -24,6 +24,26 @@ SELECT SA_SESSION.LABEL('PROJECT_OLS_POL') FROM DUAL; -- current user session la
 SELECT SA_SESSION.ROW_LABEL('PROJECT_OLS_POL') FROM DUAL; -- current data label to be applied
 SELECT SA_SESSION.PRIVS('PROJECT_OLS_POL') FROM DUAL;
 
-  --(3, 'Mike Johnson', 'north', '789 Spring St, Los Angeles, CA 90001', '555-9876', 'N', null),  
-  --(4, 'Emily Davis', 'south', '1234 North Ave, Chicago, IL 60606', '555-4567', 'Y', 7777),  
-  --(5, 'David Brown', 'east', '567 South St, Seattle, WA 98101', '555-3456', 'N', 6666);
+-- Mock data for MEDICAL_RECORDS table
+INSERT INTO INSURANCE.MEDICAL_RECORDS (record_id, user_id, diagnosis, prescription, customer_pay, company_pay)
+VALUES (1, 2, 'Common cold', 'Antibiotics', 50.00, 150.00);
+
+INSERT INTO INSURANCE.MEDICAL_RECORDS (record_id, user_id, diagnosis, prescription, customer_pay, company_pay)
+VALUES (2, 4, 'Fractured Arm', 'Cast', 100.00, 200.00);
+
+-- Mock data for CAR_RECORDS table
+INSERT INTO INSURANCE.CAR_RECORDS (record_id, user_id, situation, customer_pay, company_pay)
+VALUES (1, 1, 'Accident - Minor Damage', 500.00, 800.00);
+
+INSERT INTO INSURANCE.CAR_RECORDS (record_id, user_id, situation, customer_pay, company_pay)
+VALUES (2, 4, 'Stolen Vehicle', 1000.00, 1500.00);
+
+INSERT INTO INSURANCE.CAR_RECORDS (record_id, user_id, situation, customer_pay, company_pay)
+VALUES (3, 5, 'Accident - Major Damage', 1000.00, 2000.00);
+
+-- Mock data for JOURNEY_RECORDS table
+INSERT INTO INSURANCE.JOURNEY_RECORDS (record_id, user_id, situation, customer_pay, company_pay)
+VALUES (1, 2, 'Delayed Flight', 50.00, 100.00);
+
+INSERT INTO INSURANCE.JOURNEY_RECORDS (record_id, user_id, situation, customer_pay, company_pay)
+VALUES (2, 4, 'Cancelled Trip', 200.00, 300.00);
