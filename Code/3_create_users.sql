@@ -56,11 +56,11 @@ SA_USER_ADMIN.SET_LEVELS (
 SA_USER_ADMIN.SET_COMPARTMENTS (
   policy_name => 'PROJECT_OLS_POL',
   user_name => 'HIGH_SALE_WEST',
-  read_comps => 'C');
+  read_comps => 'C,H,J');
 SA_USER_ADMIN.SET_GROUPS (
   policy_name => 'PROJECT_OLS_POL',
   user_name => 'HIGH_SALE_WEST',
-  read_groups => 'ES');
+  read_groups => 'WS');
 SA_USER_ADMIN.SET_USER_PRIVS (
   policy_name => 'PROJECT_OLS_POL',
   user_name => 'HIGH_SALE_WEST',
