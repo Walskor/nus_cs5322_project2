@@ -25,6 +25,43 @@ CREATE TABLE INSURANCE.USERS (
     CONSTRAINT pk_User PRIMARY KEY (user_id)
 );
 
-select * from INSURANCE.USERS;
+-- -------------------------------------------------
+-- MEDICAL_RECORDS Table
+-- -------------------------------------------------
+CREATE TABLE INSURANCE.MEDICAL_RECORDS (
+    record_id NUMBER,
+    user_id NUMBER,
+    diagnosis VARCHAR(200),
+    prescription VARCHAR(100),
+    customer_pay NUMBER,
+    company_pay NUMBER,
+    CONSTRAINT pk_Medical PRIMARY KEY (record_id)
+);
+
+-- -------------------------------------------------
+-- CAR_RECORDS Table
+-- -------------------------------------------------
+CREATE TABLE INSURANCE.CAR_RECORDS (
+    record_id NUMBER,
+    user_id NUMBER,
+    situation VARCHAR(200),
+    customer_pay NUMBER,
+    company_pay NUMBER,
+    CONSTRAINT pk_Car PRIMARY KEY (record_id)
+);
+
+-- -------------------------------------------------
+-- JOURNEY_RECORDS Table
+-- -------------------------------------------------
+CREATE TABLE INSURANCE.JOURNEY_RECORDS (
+    record_id NUMBER,
+    user_id NUMBER,
+    situation VARCHAR(200),
+    customer_pay NUMBER,
+    company_pay NUMBER,
+    CONSTRAINT pk_Journey PRIMARY KEY (record_id)
+);
+
+
 
 
