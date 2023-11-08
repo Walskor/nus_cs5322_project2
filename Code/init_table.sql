@@ -16,6 +16,8 @@ begin
     VALUES (4, 'Emily Davis', 'west', '1234 North Ave, Chicago, IL 60606', '555-4567', 'Y', 7777, CHAR_TO_LABEL('PROJECT_OLS_POL','S:C,H,J:WA'));
     INSERT INTO INSURANCE.USERS 
     VALUES (5, 'David Brown', 'east', '567 South St, Seattle, WA 98101', '555-3456', 'Y', 100000, CHAR_TO_LABEL('PROJECT_OLS_POL','TS:C:EA'));
+    INSERT INTO INSURANCE.USERS 
+    VALUES (6, 'Walskor Wang', 'west', '511 West Cost Walk, Seattle, WA 37462', '151-7648', 'Y', 130000, CHAR_TO_LABEL('PROJECT_OLS_POL','S:C,H:'));
     COMMIT;
 end;
 /
