@@ -145,7 +145,11 @@ BEGIN
     label_tag => '20',
     label_value => 'S:H:WA',
     data_label => TRUE);
-    
+  SA_LABEL_ADMIN.CREATE_LABEL(
+    policy_name => 'PROJECT_OLS_POL',
+    label_tag => '21',
+    label_value => 'S:H:WA',
+    data_label => TRUE);
 END;
 /
 

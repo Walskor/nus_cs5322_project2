@@ -28,8 +28,10 @@ CREATE TABLE INSURANCE.USERS (
 -- -------------------------------------------------
 -- MEDICAL_RECORDS Table
 -- -------------------------------------------------
+CREATE SEQUENCE medical_record_id_seq START WITH 1 INCREMENT BY 1;
+
 CREATE TABLE INSURANCE.MEDICAL_RECORDS (
-    record_id NUMBER,
+    record_id NUMBER DEFAULT medical_record_id_seq.NEXTVAL,
     user_id NUMBER,
     diagnosis VARCHAR(200),
     prescription VARCHAR(100),

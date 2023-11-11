@@ -17,7 +17,7 @@ begin
     INSERT INTO INSURANCE.USERS 
     VALUES (5, 'David Brown', 'east', '567 South St, Seattle, WA 98101', '555-3456', 'Y', 100000, CHAR_TO_LABEL('PROJECT_OLS_POL','TS:C:EA'));
     INSERT INTO INSURANCE.USERS 
-    VALUES (6, 'Walskor Wang', 'west', '511 West Cost Walk, Seattle, WA 37462', '151-7648', 'Y', 130000, CHAR_TO_LABEL('PROJECT_OLS_POL','S:C,H:'));
+    VALUES (6, 'Walskor Wang', 'west', '511 West Cost Walk, Seattle, WA 37462', '151-7648', 'Y', 130000, CHAR_TO_LABEL('PROJECT_OLS_POL','TS:C,H:ES'));
     COMMIT;
 end;
 /
