@@ -13,9 +13,10 @@ select instance_name from v$instance;
 -- -------------------------------------------------
 -- User Table
 -- -------------------------------------------------
+CREATE SEQUENCE INSURANCE.user_id_seq START WITH 1 INCREMENT BY 1;
 
 CREATE TABLE INSURANCE.USERS (
-    user_id NUMBER,
+    user_id NUMBER DEFAULT INSURANCE.user_id_seq.NEXTVAL,
     name VARCHAR(50) NOT NULL,
     region VARCHAR(50) NOT NULL,
     address VARCHAR(100) NOT NULL,
@@ -28,10 +29,11 @@ CREATE TABLE INSURANCE.USERS (
 -- -------------------------------------------------
 -- MEDICAL_RECORDS Table
 -- -------------------------------------------------
-CREATE SEQUENCE medical_record_id_seq START WITH 1 INCREMENT BY 1;
+CREATE SEQUENCE INSURANCE.medical_record_id_seq START WITH 1 INCREMENT BY 1;
+
 
 CREATE TABLE INSURANCE.MEDICAL_RECORDS (
-    record_id NUMBER DEFAULT medical_record_id_seq.NEXTVAL,
+    record_id NUMBER DEFAULT INSURANCE.medical_record_id_seq.NEXTVAL,
     user_id NUMBER,
     diagnosis VARCHAR(200),
     prescription VARCHAR(100),
@@ -43,8 +45,11 @@ CREATE TABLE INSURANCE.MEDICAL_RECORDS (
 -- -------------------------------------------------
 -- CAR_RECORDS Table
 -- -------------------------------------------------
+CREATE SEQUENCE INSURANCE.car_record_id_seq START WITH 1 INCREMENT BY 1;
+
+
 CREATE TABLE INSURANCE.CAR_RECORDS (
-    record_id NUMBER,
+    record_id NUMBER DEFAULT INSURANCE.car_record_id_seq.NEXTVAL,
     user_id NUMBER,
     situation VARCHAR(200),
     customer_pay NUMBER,
@@ -55,8 +60,10 @@ CREATE TABLE INSURANCE.CAR_RECORDS (
 -- -------------------------------------------------
 -- JOURNEY_RECORDS Table
 -- -------------------------------------------------
+CREATE SEQUENCE INSURANCE.journey_record_id_seq START WITH 1 INCREMENT BY 1;
+
 CREATE TABLE INSURANCE.JOURNEY_RECORDS (
-    record_id NUMBER,
+    record_id NUMBER DEFAULT INSURANCE.journey_record_id_seq.NEXTVAL,
     user_id NUMBER,
     situation VARCHAR(200),
     customer_pay NUMBER,

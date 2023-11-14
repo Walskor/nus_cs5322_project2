@@ -1,4 +1,7 @@
-delete from INSURANCE.USERS;
+delete from INSURANCE.USERS;/
+delete from INSURANCE.MEDICAL_RECORDS;/
+delete from INSURANCE.CAR_RECORDS;/
+delete from INSURANCE.JOURNEY_RECORDS;/
 
 select * from INSURANCE.USERS;
 
@@ -18,6 +21,8 @@ begin
     VALUES (5, 'David Brown', 'east', '567 South St, Seattle, WA 98101', '555-3456', 'Y', 100000, CHAR_TO_LABEL('PROJECT_OLS_POL','TS:C:EA'));
     INSERT INTO INSURANCE.USERS 
     VALUES (6, 'Walskor Wang', 'west', '511 West Cost Walk, Seattle, WA 37462', '151-7648', 'Y', 130000, CHAR_TO_LABEL('PROJECT_OLS_POL','TS:C,H:ES'));
+    INSERT INTO INSURANCE.USERS 
+    VALUES (7, 'Jenny Yu', 'east', '592 Parc Condo, Chicago, IL 37462', '724-9723', 'Y', 30000, CHAR_TO_LABEL('PROJECT_OLS_POL','S:J:ES'));
     COMMIT;
 end;
 /
@@ -27,11 +32,11 @@ SELECT SA_SESSION.ROW_LABEL('PROJECT_OLS_POL') FROM DUAL; -- current data label 
 SELECT SA_SESSION.PRIVS('PROJECT_OLS_POL') FROM DUAL;
 
 -- Mock data for MEDICAL_RECORDS table
-INSERT INTO INSURANCE.MEDICAL_RECORDS (record_id, user_id, diagnosis, prescription, customer_pay, company_pay)
-VALUES (1, 2, 'Common cold', 'Antibiotics', 50.00, 150.00);
+INSERT INTO INSURANCE.MEDICAL_RECORDS (record_id, user_id, diagnosis, prescription, customer_pay, company_pay, OLS_COL)
+VALUES (1, 6, 'Common cold', 'Antibiotics', 50.00, 150.00, CHAR_TO_LABEL('PROJECT_OLS_POL','TS:H:ES'));
 
-INSERT INTO INSURANCE.MEDICAL_RECORDS (record_id, user_id, diagnosis, prescription, customer_pay, company_pay)
-VALUES (2, 4, 'Fractured Arm', 'Cast', 100.00, 200.00);
+INSERT INTO INSURANCE.MEDICAL_RECORDS (record_id, user_id, diagnosis, prescription, customer_pay, company_pay, OLS_COL)
+VALUES (2, 6, 'Fractured Arm', 'Cast', 100.00, 200.00, CHAR_TO_LABEL('PROJECT_OLS_POL','TS:H:ES'));
 
 -- Mock data for CAR_RECORDS table
 INSERT INTO INSURANCE.CAR_RECORDS (record_id, user_id, situation, customer_pay, company_pay)

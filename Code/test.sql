@@ -23,9 +23,11 @@ select * from INSURANCE.USERS; --can see id 5
 
 
 -- get row label info
-SELECT LABEL_TO_CHAR(OLS_COL) AS "Label",
+SELECT USER_ID,
+       NAME,
+       LABEL_TO_CHAR(OLS_COL) AS "Label",
        SUBSTR(LABEL_TO_CHAR(OLS_COL), 1, INSTR(LABEL_TO_CHAR(OLS_COL), ':', 1) - 1) AS "FirstPart",
        SUBSTR(LABEL_TO_CHAR(OLS_COL), INSTR(LABEL_TO_CHAR(OLS_COL), ':', 1) + 1,
               LENGTH(LABEL_TO_CHAR(OLS_COL)) - 2 * INSTR(LABEL_TO_CHAR(OLS_COL), ':') - 1) AS "MiddlePart",
        SUBSTR(LABEL_TO_CHAR(OLS_COL), INSTR(LABEL_TO_CHAR(OLS_COL), ':', -1) + 1) AS "LastPart"
-FROM INSURANCE.USERS;
+FROM INSURANCE.USERS;   
