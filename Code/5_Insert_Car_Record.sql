@@ -64,3 +64,14 @@ BEGIN
     COMMIT;
 END INSERT_CAR_RECORD;
 /
+
+
+-- BEGIN
+-- INSURANCE.INSERT_CAR_RECORD(
+--     p_user_id => 6, 
+--     p_situation => 'Second Time', 
+--     p_customer_pay => 20.00, 
+--     p_company_pay => 50.00
+-- );
+-- END;
+/

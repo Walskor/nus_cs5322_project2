@@ -148,7 +148,17 @@ BEGIN
   SA_LABEL_ADMIN.CREATE_LABEL(
     policy_name => 'PROJECT_OLS_POL',
     label_tag => '21',
-    label_value => 'S:H:WA',
+    label_value => 'S:C,H:ES',
+    data_label => TRUE);
+  SA_LABEL_ADMIN.CREATE_LABEL(
+    policy_name => 'PROJECT_OLS_POL',
+    label_tag => '22',
+    label_value => 'TS:C,H:ES',
+    data_label => TRUE);
+  SA_LABEL_ADMIN.CREATE_LABEL(
+    policy_name => 'PROJECT_OLS_POL',
+    label_tag => '23',
+    label_value => 'TS:H:COM',
     data_label => TRUE);
 END;
 /
