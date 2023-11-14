@@ -30,6 +30,12 @@ INSURANCE.CREATE_USER(
 );
 END;/
 
-SELECT * FROM INSURANCE.USERS;
+SELECT USER_ID,
+       NAME,
+       region,
+       is_customer,
+       premium,
+       LABEL_TO_CHAR(OLS_COL) AS "Label"
+FROM INSURANCE.USERS;   
 /
 
